@@ -58,6 +58,28 @@ namespace WindowsFormsUsers
                dataGridViewUsers.Rows[e.RowIndex].Cells[4].Value.ToString();
                 FormEditUser.Show();
             }
+            if (dataGridViewUsers.CurrentCell.ColumnIndex.Equals(6) && e.RowIndex != -1)
+            {
+                DeleteUser FormDeleteUser = new DeleteUser(this);
+                FormDeleteUser.nID = dataGridViewUsers.Rows[e.RowIndex].Cells[0].Value.ToString();
+                FormDeleteUser.sUsername = dataGridViewUsers.Rows[e.RowIndex].Cells[1].Value.ToString();
+                FormDeleteUser.sPassword = dataGridViewUsers.Rows[e.RowIndex].Cells[2].Value.ToString();
+                FormDeleteUser.sName = dataGridViewUsers.Rows[e.RowIndex].Cells[3].Value.ToString();
+                FormDeleteUser.sSurname = dataGridViewUsers.Rows[e.RowIndex].Cells[4].Value.ToString();
+                FormDeleteUser.Show();
+            }
+        }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+
+            Form4 AddNewUser = new Form4(this);
+            AddNewUser.Show();
+        }
+
+        private void BtnSearch_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }
