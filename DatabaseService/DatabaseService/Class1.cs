@@ -80,5 +80,14 @@ namespace DatabaseService
                 }
             }
         }
+        public void SearchUsers(User oUser)
+        {
+            String sSqlConnectionString = ConfigurationManager.ConnectionStrings["DbConnection"].ConnectionString;
+            using (DbConnection oConnection = new SqlConnection(sSqlConnectionString))
+            using (DbCommand oCommand = oConnection.CreateCommand())
+            {
+                
+            }
+        }
     }
 }

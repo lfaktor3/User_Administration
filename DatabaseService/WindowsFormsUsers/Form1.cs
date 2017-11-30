@@ -77,9 +77,41 @@ namespace WindowsFormsUsers
             AddNewUser.Show();
         }
 
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
         private void BtnSearch_Click(object sender, EventArgs e)
         {
-            
+           
+        }
+
+        private void oProgramuToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Created by Luka Faktor \n version 0.07 \n in Virovitica \n 2017");
+        }
+
+        private void izlazToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void minimizirajToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void izlazToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void dodajKorisnikaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form4 AddNewUser = new Form4(this);
+            AddNewUser.Show();
         }
     }
 }
